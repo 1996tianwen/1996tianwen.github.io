@@ -1,0 +1,17 @@
+---
+layout: default
+title: 故事最后天空放了晴
+---
+<div id="index" class="row">
+	<div class="post-area">
+		<div class="post-list-body">
+			<ul class="posts">
+				{% for post in site.posts %}
+				<li>
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
