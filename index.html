@@ -2,3 +2,16 @@
 layout: default
 title: 故事最后天空放了晴
 ---
+<ul>
+	{% for post in site.posts %}
+	<li>
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<span>
+			{{ post.date | date_to_string }}
+		</span>
+		<p>
+			
+		</p>
+	</li>
+	{% endfor %}
+</ul>
