@@ -1,0 +1,11 @@
+<div class="shadow-corner-curl">
+	<div>
+		Categories
+	</div>
+	{% for category in site.categories order:ascending %}
+	<a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+		{{ category | first }}
+		<span class="my-badge">{{ category | last | size }}</span>
+	</a>
+	{% endfor %}
+</div>
