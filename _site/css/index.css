@@ -1,2 +1,21 @@
-/*导航栏*/
-
+#example-navbar-collapse{
+	margin-left: 250px;
+	margin-right: 250px;
+}
+.head-logo{
+	margin: 15px;
+	text-align: center;
+	float: left;
+	margin-left: 20px;
+}
+.head-content{
+	margin-left: 400px;
+}
+.posts_div{
+	/*text-align: left;*/
+	margin-left: 250px;
+	margin-right: 250px;
+}
+.posts_ul{
+	list-style-type: none;
+}

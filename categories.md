@@ -3,7 +3,7 @@ layout: default
 title: "分类：Categories"
 ---
 
-<ul class="list-unstyled">
+<ul class="posts_ul">
 
 {% for cat in site.categories %}
 
