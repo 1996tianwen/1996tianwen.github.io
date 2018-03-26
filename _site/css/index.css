@@ -19,3 +19,43 @@
 .posts_ul{
 	list-style-type: none;
 }
+.sidebar-toggle{
+	position: fixed;
+	right: 50px;
+	bottom: 45px;
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	line-height: 0;
+	z-index: 1050;
+	cursor: pointer;
+}
+.sidebar{
+	position: fixed;
+	width: 250px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1040;
+	box-shadow: 0 2px 6px #000;
+	background: #222;
+}
+.sidebar-none{
+	position: fixed;
+	width: 0px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1040;
+	box-shadow: 0 2px 6px #000;
+	background: #222;
+}
+.sidebar-inner{
+	position: relative;
+	padding: 20px 10px;
+	text-align: center;
+	color: #999;
+}
+.show-sidebar{
+	transform: translateX(0);
+}

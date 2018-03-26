@@ -6,6 +6,7 @@
 	<script src="/js/jquery-1.11.0.js"> </script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/index.js"></script>
+	<script src="/js/love.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
@@ -95,6 +96,29 @@
 	</article>
 	<hr>
 </div>
+		<div class="sidebar-toggle">
+			<span class="" id="mobile-nav-taggle">
+				更多
+			</span>
+		</div>
+		<script type="text/javascript">
+			$("#mobile-nav-taggle").click(function(){
+				var menu = $("#mobile-menu");
+				if (menu.hasClass("sidebar-none")) {
+					menu.removeClass("sidebar-none");
+					menu.addClass("sidebar");
+				}else{
+					menu.removeClass("sidebar");
+					menu.addClass("sidebar-none");
+				}
+
+			})
+		</script>
+		<div id="mobile-menu" class="sidebar-none">
+			<ul>
+				<li>a</li>
+			</ul>
+		</div>
 	</div>
 
 	<div id="back-to-top" class="back-to-top">
