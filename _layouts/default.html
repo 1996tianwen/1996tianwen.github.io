@@ -11,17 +11,16 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	
+
 	<div id="wrapper">
         <div class="overlay"></div>
     
         <!-- Sidebar -->
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+
             <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                       Bootstrap 3
-                    </a>
+                	<div class="xwcms"></div>
                 </li>
             </ul>
         </nav>
@@ -29,11 +28,37 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+	        <nav class="navbar navbar-default" role="navigation">
+	          	<div class="container-fluid">
+	          		<div class="navbar-header">
+	          			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+	          				<span class="sr-only"></span>
+	          				<span class="icon-bar"></span>
+	          				<span class="icon-bar"></span>
+	          				<span class="icon-bar"></span>
+	          			</button>
+	          		</div>
+	          		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+	          			<div class="head-logo">
+	          				故事最后天空放了晴
+	          			</div>
+	          			<div class="head-content">
+	          				{% include navigation.html %}
+	          			</div>
+
+	          		</div>
+	          	</div>
+	          </nav> 
+
           <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
             <span class="hamb-top"></span>
             <span class="hamb-middle"></span>
             <span class="hamb-bottom"></span>
           </button>
+
+
+
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">

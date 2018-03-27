@@ -39,10 +39,12 @@ public class ExcelUtil {
             if (null == sheet){
                 continue;
             }
-            //每一行
+            //每一行 行从0开始
             for(int rowNum = 1;rowNum <= sheet.getLastRowNum();rowNum++){
                 XSSFRow xssfRow = (XSSFRow) sheet.getRow(rowNum);
+                //从0开始
                 int minColIx = xssfRow.getFirstCellNum();
+                //按这一行最后出现内容的列算
                 int maxColIx = xssfRow.getLastCellNum();
                 List<String>rowList = new ArrayList<>();
 //                每一列
@@ -80,6 +82,13 @@ public class ExcelUtil {
 
 ```
 
-<p>在读取并修改后，报错。</p>
+<p>可能会出现的异常</p>
 
-![EmptyFileException](/images/EmptyFileException.png)
+![EmptyFileException](/images/18-03-26EmptyFileException.png)
+
+<p>行与行之间不能出现空白行，否则会报空指针</p>
+
+![](/images/18-03-26-Null.png)
+
+![](/images/18-03-26-NullPointException.png)
+
