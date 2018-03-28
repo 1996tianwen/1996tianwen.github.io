@@ -14,3 +14,21 @@ layout: default
 	</article>
 	<hr>
 </div>
+<div style="margin-top: 10px;margin-bottom: 10px">
+	{% if page.previous %}
+	<span>
+		上篇
+		<a href="{{ page.previous.url }}">
+			{{ page.previous.title }}
+		</a>
+	</span>
+	{% endif %}
+	{% if page.next %}
+	<span style="float: right">
+		下篇
+		<a href="{{ page.next.url }}">
+			{{ page.next.title }}
+		</a>
+	</span>
+	{% endif %}
+</div>
