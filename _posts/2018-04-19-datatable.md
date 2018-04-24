@@ -1,6 +1,6 @@
 ---
 layout: post
-title: datatable
+title: 初识datatable
 keywords: 
 category: datatable
 author: 晴天
@@ -59,7 +59,7 @@ Cross origin requests are only supported for protocol schemes: http, data, chrom
 send @ jquery-1.12.4.js:10254
 ```
 
-<p>huan换用ie，就能正常打开。。。</p>
+<p>换用ie，就能正常打开。。。</p>
 
 ```
 <!DOCTYPE html>
@@ -579,3 +579,35 @@ send @ jquery-1.12.4.js:10254
 <li>数据类型</li>
 
 <li>数据源</li>
+
+<p>处理模式(Processing modes)：DataTables中有两种不同的方式处理数据（排序、搜索、分页等）</p>
+
+<p>	客户端处理(Client)：所有数据集预先加载（一次获取所有数据），数据处理都是在浏览器中完成的【逻辑分页】</p>
+
+<p>	服务器端处理(ServerSide)：数据处理是在服务器上执行（页面只处理当前页的数据）【物理分页】</p>
+
+<p>每种模式都有自己的有点和缺点，选择哪种模式是由你的数据量决定的。根据经验来看，数据少于10000行，可以选择客户端模式，超过10000行的使用服务器端处理。**注意：两种处理模式不能同时使用，但是可以动态更改从一个模式到另一个。**</p>
+
+```
+$('#example').DataTable({
+  //开启服务器模式
+  serverSide: true
+});
+```
+
+<p>数据源类型(Data source types)</p>
+
+* 数组
+
+* 对象
+
+* 实例
+
+
+<p>Data sources</p>
+
+* DOM
+* JavaScript
+* Ajax
+
+<p>待续。。。</p>
