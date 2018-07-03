@@ -29,7 +29,25 @@ description:
       drawCallback: function () {
           $("#individualCharacterParameters a").editable({
        		 mode:"inline",
-       		 url: function (params) {
+       		 validate: function (params) {
+        		var paramName = rowData.PARAM_NAME;
+          		var regPos1 = /^[1-9]\d{0,5}$/; // 非负整数
+          		var regByte1 = /^[0-1]{8}$/;
+          		if ("trackingContentFlag.flag1" == paramName || "trackingContentFlag.flag2" == paramName || "trackingContentFlag.flag3" == paramName){
+            		if(!regByte1.test(params)){
+              			// data.resultException = "请输入指定范围内的整数";
+              			// alertMsg(data);
+             		 	return "请输入指定范围内的整数";
+            		}
+          		} else {
+            		if(!regPos1.test(params)){
+              			// data.resultException = "请输入指定范围内的整数";
+              			// alertMsg(data);
+              		return "请输入指定范围内的整数";
+            		}
+          		}
+        	},
+       		url: function (params) {
           		var deviceId = params.pk;
           		var paramName = $(this).attr("name");
          		 var paramValue = params.value;
@@ -63,3 +81,4 @@ description:
      }
 ```
 
+<p>validate:在这里加了校验</p>
