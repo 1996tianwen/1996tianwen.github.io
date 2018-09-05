@@ -1,10 +1,9 @@
 ---
 layout: post
-title: 日常记录
+title: elastic-job-spring zookeeper
 keywords: 
-category: 瞎几把写
+category: elastic-job
 author: 晴天
 description: 
 ---
 
-1.
